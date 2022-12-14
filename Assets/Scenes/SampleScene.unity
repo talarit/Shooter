@@ -1950,6 +1950,7 @@ MonoBehaviour:
   range: 15
   score: {fileID: 1191895028}
   scoreVal: 0
+  target: {fileID: 4697017240656324050, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
 --- !u!82 &1719298368
 AudioSource:
   m_ObjectHideFlags: 0

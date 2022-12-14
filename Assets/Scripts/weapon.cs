@@ -12,6 +12,8 @@ public class weapon : MonoBehaviour
     public float range = 15f;
     public Text score;
     public int scoreVal=0;
+    private Animator anim;
+    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,9 @@ public class weapon : MonoBehaviour
     // Update is called once per frame
     private void Awake()
     {
+
+       
+        
         score.text = $"{scoreVal}";
     }
     void Update()
@@ -32,6 +37,7 @@ public class weapon : MonoBehaviour
         }
     }
 
+
     void Shooting()
     {
         //סענוכüבא
@@ -41,7 +47,9 @@ public class weapon : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Target"))
             {
-                Destroy(hit.transform.gameObject);
+                anim = hit.collider.GetComponent<Animator>();
+                anim.Play("died");
+                Destroy(hit.transform.gameObject,1f);
                 scoreVal++;
             }
         }

@@ -46,11 +46,11 @@ public class Game : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(5f);
             if (a != null)
             {
-                //уничтожение мишени через две секунды
-                Destroy(a, 2);
+                //уничтожение мишени через пять секунды
+                Destroy(a, 5);
                 if (_weapon.scoreVal > 0)
                 {
                     _weapon.scoreVal--;
